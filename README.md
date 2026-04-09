@@ -1,17 +1,10 @@
-# getx_learning
+# Learn GetX state Management
 
-A new Flutter project.
+A learning resource of GetX State Management.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Step 1
+- Install the package: ```flutter pub add get``` //-- this is the parent package of GetX
+- Install the package: ```flutter pub add get_storage``` //-- if you need to manage storage related, 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
