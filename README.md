@@ -11,7 +11,7 @@ A learning resource of GetX State Management.
 ### getx-snackbar 
 - In this branch will learn how to manage or customise a snackbar using getx
 
-#### If you want to use getx functionality in you application, you have to use
+#### If you want to use getx functionality in your application, you have to use
 ```
 class App extends StatelessWidget {
   const App({super.key});
@@ -49,3 +49,21 @@ class App extends StatelessWidget {
 
 ```
 
+### getx-dialog
+- In this branch will learn how to manage or customise a dialog using getx
+```
+        child: ElevatedButton(
+          onPressed: () {
+            Get.defaultDialog(
+              title: "Alert Dialog",
+              titlePadding: const EdgeInsets.all(10),
+              middleText: "This is middle text",
+              textConfirm: "Confirm",
+              textCancel: "Cancel",
+              onConfirm: ()=>{Get.back(closeOverlays: true)},
+              onCancel: ()=>{Get.back(closeOverlays: true)},
+            );
+          },
+          child: Text("Show Dialog"),
+        ),
+```

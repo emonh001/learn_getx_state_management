@@ -11,16 +11,17 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Get.snackbar(
-              "Hello!",
-              "This is getx snack bar",
-              snackPosition: .BOTTOM,
-              showProgressIndicator: true,
-              backgroundColor: Colors.grey,
-              colorText: Colors.white,
+            Get.defaultDialog(
+              title: "Alert Dialog",
+              titlePadding: const EdgeInsets.all(10),
+              middleText: "This is middle text",
+              textConfirm: "Confirm",
+              textCancel: "Cancel",
+              onConfirm: ()=>{Get.back(closeOverlays: true)},
+              onCancel: ()=>{Get.back(closeOverlays: true)},
             );
           },
-          child: Text("Show SnackBar"),
+          child: Text("Show Dialog"),
         ),
       ),
     );
