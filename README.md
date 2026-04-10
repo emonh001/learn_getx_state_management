@@ -162,3 +162,6 @@ class App extends StatelessWidget {
 ```GetStorage().remove("myName");```
 ```GetStorage().erase();```
 - So called shared preferences 
+
+#State Management with Counter app
+- for this, see lib folder
