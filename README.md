@@ -152,3 +152,13 @@ class App extends StatelessWidget {
 - ```Get.offAllNamed("/home)```
 ##### You can also set screen transition animation:
 ```GetPage(name: "/third", page: () => const ThirdScreen(), transition: Transition.zoom),```
+
+# GetX Storage
+```GetStorage().write(key, value)```
+```
+              var myName = GetStorage().read("myName");
+              Get.snackbar(myName, "My name from storage: $myName");
+```
+```GetStorage().remove("myName");```
+```GetStorage().erase();```
+- So called shared preferences 
