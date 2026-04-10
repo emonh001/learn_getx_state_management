@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Get.to(const SecondScreen(),); //Get.to() will keep the previous screen on Stack, automatically backbutton will be visible
+            Get.toNamed("/second"); //Get.toNamed("/second"); will keep the previous screen on Stack, automatically backbutton will be visible
           },
           child: Text("Go to second"),
         ),

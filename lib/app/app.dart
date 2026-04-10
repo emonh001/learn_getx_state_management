@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
 import 'package:getx_learning/ui/home_screen.dart';
+import 'package:getx_learning/ui/second_screen.dart';
+import 'package:getx_learning/ui/third_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -9,7 +11,12 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      initialRoute: "/", //its data type is String
+      getPages: [
+        GetPage(name: "/", page: () => const HomeScreen(), transition: Transition.zoom),
+        GetPage(name: "/second", page: () => const SecondScreen(), transition: Transition.circularReveal),
+        GetPage(name: "/third", page: () => const ThirdScreen(), transition: Transition.zoom),
+      ],
     );
   }
 }
