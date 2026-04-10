@@ -24,9 +24,7 @@ class ThirdScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Get.offAll(
-                  const HomeScreen(),
-                ); //Get.offAll() will remove all the screen from stack
+                Get.offAllNamed("/home"); //Get.offAllNamed("/home"); will remove all the screen from stack
               },
               child: Text("Back to home"),
             ),
