@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_learning/ui/second_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,36 +8,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Home Screen")),
       backgroundColor: Colors.indigo.shade50,
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Get.bottomSheet(
-              Container(
-                height: 200,
-                width: double.infinity,
-                padding: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(15),
-                    topRight: Radius.circular(15),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Text("Item 1"),
-                    Text("Item 2"),
-                    Text("Item 3"),
-                    Text("Item 4"),
-                    Text("Item 5"),
-                    Text("Item 6"),
-                  ],
-                ),
-              ),
-            );
+            Get.to(const SecondScreen(),); //Get.to() will keep the previous screen on Stack, automatically backbutton will be visible
           },
-          child: Text("Show Dialog"),
+          child: Text("Go to second"),
         ),
       ),
     );
